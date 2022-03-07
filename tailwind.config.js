@@ -1,10 +1,12 @@
-
-   
+/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
 const path = require('path');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: [path.join(__dirname, 'src', 'components', '**', '*.{js,ts,jsx,tsx}'), path.join(__dirname, 'src', 'pages', '**', '*.{js,ts,jsx,tsx}')],
+  content: [
+    path.join(__dirname, 'src', 'components', '**', '*.{js,ts,jsx,tsx}'),
+    path.join(__dirname, 'src', 'pages', '**', '*.{js,ts,jsx,tsx}'),
+  ],
   theme: {
     extend: {
       container: {
@@ -32,14 +34,11 @@ module.exports = {
       boxShadow: {
         right: '6px 1px 7px -3px rgb(0 0 0 / 20%)',
         left: '-6px 1px 7px -3px rgb(0 0 0 / 20%)',
-      }
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [
-    require('tailwindcss-rtl'),
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [require('tailwindcss-rtl'), require('@tailwindcss/forms')],
+};
