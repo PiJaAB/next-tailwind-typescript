@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
 import styles from 'src/styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -14,12 +14,17 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a className="" href="https://nextjs.org">Next.js!</a>
+          Welcome to{' '}
+          <a className="" href="https://nextjs.org">
+            Next.js!
+          </a>
         </h1>
 
         <p className="my-16 text-2xl text-center">
           Get started by editing{' '}
-          <code className="rounded p-3 text-lg font-mono bg-neutral-100">pages/index.tsx</code>
+          <code className="rounded p-3 text-lg font-mono bg-neutral-100">
+            pages/index.tsx
+          </code>
         </p>
 
         <div className={styles.grid}>
@@ -66,7 +71,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
