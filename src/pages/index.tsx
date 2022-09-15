@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from 'src/styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -12,10 +11,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main className="min-h-screen py-16 flex flex-col justify-center items-center">
+        <h1 className="m-0 text-6xl text-center">
           Welcome to{' '}
-          <a className="" href="https://nextjs.org">
+          <a
+            className="text-primary no-underline hover:underline focus:underline active:underline"
+            href="https://nextjs.org"
+          >
             Next.js!
           </a>
         </h1>
@@ -27,45 +29,58 @@ const Home: NextPage = () => {
           </code>
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2 className="">Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+        <div className="flex items-center justify-center max-w-3xl flex-wrap w-full flex-col md:w-auto md:flex-row">
+          <a
+            href="https://nextjs.org/docs"
+            className="m-4 p-6 text-left no-underline text-inherit border border-neutral-200 rounded-xl transition-colors max-w-xs w-full hover:text-primary focus:text-primary active:text-primary hover:border-primary focus:border-primary active:border-primary"
+          >
+            <h2 className="mb-4 text-2xl">Documentation &rarr;</h2>
+            <p className="m-0 text-xl">
+              Find in-depth information about Next.js features and API.
+            </p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a
+            href="https://nextjs.org/learn"
+            className="m-4 p-6 text-left no-underline text-inherit border border-neutral-200 rounded-xl transition-colors max-w-xs w-full hover:text-primary focus:text-primary active:text-primary hover:border-primary focus:border-primary active:border-primary"
+          >
+            <h2 className="mb-4 text-2xl">Learn &rarr;</h2>
+            <p className="m-0 text-xl">
+              Learn about Next.js in an interactive course with quizzes!
+            </p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
+            className="m-4 p-6 text-left no-underline text-inherit border border-neutral-200 rounded-xl transition-colors max-w-xs w-full hover:text-primary focus:text-primary active:text-primary hover:border-primary focus:border-primary active:border-primary"
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2 className="mb-4 text-2xl">Examples &rarr;</h2>
+            <p className="m-0 text-xl">
+              Discover and deploy boilerplate example Next.js projects.
+            </p>
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            href="https://vercel.com/new?utm_source=create-next-app&amp;utm_medium=default-template&amp;utm_campaign=create-next-app"
+            className="m-4 p-6 text-left no-underline text-inherit border border-neutral-200 rounded-xl transition-colors max-w-xs w-full hover:text-primary focus:text-primary active:text-primary hover:border-primary focus:border-primary active:border-primary"
           >
-            <h2>Deploy &rarr;</h2>
-            <p>
+            <h2 className="mb-4 text-2xl">Deploy &rarr;</h2>
+            <p className="m-0 text-xl">
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
         </div>
       </main>
 
-      <footer className={styles.footer}>
+      <footer className="flex flex-1 py-8 border-t border-neutral-200 justify-center items-center">
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com?utm_source=create-next-app&amp;utm_medium=default-template&amp;utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex justify-center items-center flex-grow"
         >
           Powered by{' '}
-          <span className={styles.logo}>
+          <span className="h-4 ms-2">
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
